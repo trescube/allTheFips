@@ -1,0 +1,29 @@
+{
+  "name": "zipsAndFips",
+  "version": "1.0.0",
+  "description": "Zip code to FIPS code lookup and vice versa",
+  "main": "index.js",
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "scripts": {
+    "rebuild_data": "node refresh_data.js",
+    "test": "mocha"
+  },
+  "keywords": [
+    "Zip codes",
+    "FIPS",
+    "FIPS codes"
+  ],
+  "author": "trescube",
+  "license": "MIT",
+  "devDependencies": {
+    "mocha": "^5.0.0"
+  },
+  "dependencies": {
+    "better-sqlite3": "^4.1.0",
+    "csv-stream": "^0.1.3",
+    "request": "^2.83.0",
+    "through2-sink": "^1.0.0"
+  }
+}
