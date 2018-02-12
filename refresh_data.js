@@ -56,7 +56,7 @@ request.get(url)
 
       db.prepare('COMMIT').run();
 
-      console.log(`inserted ${Object.keys(zips2fips).length} zip codes`);
+      console.log(`inserted ${Object.keys(zips2fips).length} ZIP codes`);
       console.log(`inserted ${Object.keys(fips2zips).length} FIPS codes`);
 
     } finally {
