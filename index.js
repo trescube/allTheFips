@@ -13,7 +13,7 @@ module.exports = {
       return [];
     }
 
-    // otherwise, split by comma and convert to objects
+    // otherwise, split by comma and convert 7-char length values to objects
     return result.fipscodes.
       split(',').
       filter(fipscode => fipscode.length === 7).
@@ -33,7 +33,11 @@ module.exports = {
       return [];
     }
 
-    return result.zipcodes.split(',').filter(zipcode => zipcode.length === 5);
+    // otherwise, split by comma and return 5-char length values
+    return result.zipcodes.
+      // only consider 5-digit FIPS codes
+      split(',').
+      filter(zipcode => zipcode.length === 5);
 
   }
 };
