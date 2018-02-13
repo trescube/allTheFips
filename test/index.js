@@ -34,7 +34,7 @@ before(() => {
 
 });
 
-describe('lookup FIPS codes from zip codes', () => {
+describe('lookup FIPS codes from ZIP codes', () => {
   it('ZIP code mapping to a single FIPS code should unmarshall to a single object', done => {
     const zipsAndFips = require('..');
 
